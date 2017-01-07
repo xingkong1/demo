@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//WebContent/frame/addDepartment.jsp=UTF-8
+encoding//WebContent/frame/list.html=UTF-8
+encoding//src/com/imooc/employee/Dao/DepartmentDao.java=UTF-8
+encoding//src/com/imooc/employee/action/DepartmentAction.java=UTF-8
+encoding//src/com/imooc/employee/service/DepartmentServiceImpl.java=UTF-8
+encoding/<project>=UTF-8

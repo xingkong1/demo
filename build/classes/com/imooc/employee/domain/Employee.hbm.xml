@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-11-24 21:49:26 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.imooc.employee.domain.Employee" table="EMPLOYEE">
+        <id name="eid" type="java.lang.Integer">
+            <column name="EID" />
+            <generator class="native" />
+        </id>
+        <property name="ename" type="java.lang.String" >
+            <column name="ENAME" />
+        </property>
+        <property name="sex" type="java.lang.String" >
+            <column name="SEX" />
+        </property>
+        <property name="birthday" type="java.sql.Date">
+            <column name="BIRTHDAY" />
+        </property>
+        <property name="joinDate" type="java.sql.Date">
+            <column name="JOINDATE" />
+        </property>
+        <property name="username" type="java.lang.String" >
+            <column name="USERNAME" />
+        </property>
+        <property name="password" type="java.lang.String" >
+            <column name="PASSWORD" />
+        </property>
+        <many-to-one name="department" lazy="false" fetch="join" class="com.imooc.employee.domain.Department" >
+            <column name="dno" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

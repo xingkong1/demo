@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+
+<package name="ssh" extends="struts-default" namespace="/">
+ 
+<interceptors>
+<interceptor name="loginCheck" class="com.imooc.employee.interceptor.LoginInterceptor">
+<param name="excludeMethods">login</param>
+</interceptor>
+</interceptors>
+
+<action name="employee_*" class="employeeAction" method="{1}">
+<result name="success">/frame.jsp</result>
+<result name="false">/frame/right.html</result>
+<result name="input">/index.jsp</result>
+<result name="listEmployee">/frame/listEmployee.jsp</result>
+<result name="save">/frame/addEmployee.jsp</result>
+<result name="modify">/frame/editEmployee.jsp</result>
+<interceptor-ref name="loginCheck"></interceptor-ref>
+<interceptor-ref name="defaultStack"></interceptor-ref>
+</action>
+
+<action name="department_*" class="departmentAction" method="{1}">
+<result name="success">/frame/listDep.jsp</result>
+<result name="false">/frame/right.html</result>
+<result name="input">/index.jsp</result>
+<result name="editSuccess">/frame/editDept.jsp</result>
+<interceptor-ref name="defaultStack"></interceptor-ref>
+</action>
+</package>
+
+
+</struts>
