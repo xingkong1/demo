@@ -1,2 +1,2 @@
 本程序是一个关于公司员工信息的后台管理。
-使用了struts2框架作为控制层，spring框架作为中间逻辑层，hibernate作为数据操作、持久层，使用mysql数据库
+使用了struts2框架作为控制层，spring框架作为中间逻辑层，hibernate作为数据操作、持久层，使用mysql数据库保存数据
